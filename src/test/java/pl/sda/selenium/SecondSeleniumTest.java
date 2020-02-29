@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SecondSeleniumTest {
-    // TypOgolny nazwazmiennej = new TypSzczególny()
+    // TypOgolny nazwa-zmiennej = new TypSzczegolny()
     WebDriver browser = new ChromeDriver ();    // wyciągnięte do góry jako zmienna zadana dla całej klasy
 
     @BeforeClass                                // opisujemy co przed całym zestawem testów ma zrobić klasa
@@ -23,22 +23,22 @@ public class SecondSeleniumTest {
     }
 
     @Test
-    public void talkToBrowser() {           // pierwszy test po prostu otwiera i zamyka strone
+    public void talkToBrowser() {               // pierwszy test po prostu otwiera i zamyka strone
         System.out.println (browser.getCurrentUrl ());
         System.out.println (browser.getTitle ());
     }
 
     @Test
-    public void navigate() {                // drugi test do navigacji między stronami
+    public void navigate() {                    // drugi test do navigacji między stronami
         browser.navigate ().to ("http://frisco.com/");
         browser.navigate ().refresh ();
         browser.navigate ().back ();
         browser.navigate ().forward ();
     }
 
-    @After                                  // wykona się przed po testem
+    @After                                      // wykona się przed po testem
     public void afterEachTest(){
-        browser.quit ();                    // całkowicie zakończy komunikację z webdriverem - zamknie wszystko
+        browser.quit ();                        // całkowicie zakończy komunikację z webdriverem - zamknie wszystko
     }
 
 }

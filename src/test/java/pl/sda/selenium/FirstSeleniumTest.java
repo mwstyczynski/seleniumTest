@@ -12,7 +12,6 @@ public class FirstSeleniumTest {
         System.setProperty ("webdriver.chrome.driver", "C:/bin/chromedriver.exe");
     }
 
-
     @Test
     public void talkToBrowser() {           // pierwszy test po prostu otwiera i zamyka strone
         WebDriver browser = new ChromeDriver ();    // TypOgólny nazwazmiennej = new TypSzczególny();
